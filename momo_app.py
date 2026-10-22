@@ -2926,15 +2926,12 @@ CONTROLLER_BUTTONS = {
     13: 10,
     14: 11,
 }
-CONTROLLER_GUIDE = 5
 CONTROLLER_TRIGGERS = {4: 6, 5: 7}
 TRIGGER_PRESS = 16000
 TRIGGER_RELEASE = 8000
 
 
 def controller_button(momo, pressed_buttons, button, down):
-    if button == CONTROLLER_GUIDE:
-        return down
     internal = CONTROLLER_BUTTONS.get(button)
     if internal is None:
         return False
